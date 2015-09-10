@@ -1,0 +1,30 @@
+// Place all the styles related to the Inventories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.button-text {
+  font-size: .8rem;
+}
+
+.card-image {
+  background-image: url('//wallpaperscraft.com/image/osaka_asia_street_lights_city_buildings_28514_2560x1600.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 15vw;
+}
+
+::-webkit-input-placeholder {
+  font-size: .7rem;
+}
+
+::-moz-placeholder {
+  font-size: .7rem;
+}
+
+:-ms-input-placeholder {
+  font-size: .7rem;
+}
+
+input:-moz-placeholder {
+  font-size: .7rem;
+}

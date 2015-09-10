@@ -1,0 +1,25 @@
+.row
+  .col-xs-6.col-xs-offset-3
+    .card
+      .card-image
+      .card-block
+        = form_for @inventory, :class => 'form-inline' do |f|
+          .row.form-group
+            .col-xs-12
+              = f.text_field :name,
+                :class => 'form-control input-lg text-center',
+                :placeholder => 'INVENTORY NAME'
+          .row.form-group
+            .col-xs-12
+              = f.text_field :type,
+              :class => 'form-control input-lg text-center',
+              :placeholder => 'INVENTORY TYPE'
+          .row.form-group
+            .col-xs-12
+              = f.text_field :quantity,
+              :class => 'form-control input-lg text-center',
+              :placeholder => 'QUANTITY'
+          .row
+            .col-xs-12
+              button.btn.btn-primary-outline.btn-block
+                span.button-text ADD TO NVNTORY
