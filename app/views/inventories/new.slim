@@ -11,9 +11,10 @@
                 :placeholder => 'INVENTORY NAME'
           .row.form-group
             .col-xs-12
-              = f.text_field :type,
-              :class => 'form-control input-lg text-center',
-              :placeholder => 'INVENTORY TYPE'
+              = f.select :category,
+                options_for_select([['Food', 'food'], ['Supplies', 'supplies'], ['Misc', 'misc']]),
+                {:include_blank => '-'},
+                {:class => 'c-select'}
           .row.form-group
             .col-xs-12
               = f.text_field :quantity,

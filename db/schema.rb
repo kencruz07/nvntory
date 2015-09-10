@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20150910071825) do
 
   create_table "inventories", force: :cascade do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "category"
     t.integer  "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
