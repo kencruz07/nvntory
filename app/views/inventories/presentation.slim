@@ -1,0 +1,367 @@
+<div id="presentation-carousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#presentation-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#presentation-carousel" data-slide-to="1"></li>
+    <li data-target="#presentation-carousel" data-slide-to="2"></li>
+    <li data-target="#presentation-carousel" data-slide-to="3"></li>
+    <li data-target="#presentation-carousel" data-slide-to="4"></li>
+    <li data-target="#presentation-carousel" data-slide-to="5"></li>
+    <li data-target="#presentation-carousel" data-slide-to="6"></li>
+    <li data-target="#presentation-carousel" data-slide-to="7"></li>
+    <li data-target="#presentation-carousel" data-slide-to="8"></li>
+    <li data-target="#presentation-carousel" data-slide-to="9"></li>
+    <li data-target="#presentation-carousel" data-slide-to="10"></li>
+    <li data-target="#presentation-carousel" data-slide-to="11"></li>
+    <li data-target="#presentation-carousel" data-slide-to="12"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      #slide-one.slide
+        p.title slim template
+        p.subtitle SHORT DISCUSSION ABOUT SLIM TEMPLATE
+    </div>
+    <div class="carousel-item">
+      #slide-two.slide
+        p.title slim is...
+        p.subtitle a template language whose goal is reduce the syntax to the essential parts without becoming cryptic.
+        p.source
+          i https:/github.com/slim-template/slim
+    </div>
+    <div class="carousel-item">
+      #slide-three.slide
+        p.title slim's features
+        p.subtitle elegant syntax
+        p.subtitle highly configurable
+        p.subtitle high performance
+        p.subtitle supported by rails, sinatra, other major frameworks
+        p.subtitle supports markdown
+        p.source
+          i https:/github.com/slim-template/slim
+    </div>
+    <div class="carousel-item">
+      #slide-four.slide
+        p.title slim vs some template engines
+        p.subtitle
+          | (usage)
+        #comparison
+          #erubis.comparison-item erubis
+          #haml.comparison-item haml
+          #slim.comparison-item slim
+          #others.comparison-item others
+        p.source
+          i https:/www.ruby-toolbox.com/categories/template_engines
+    </div>
+    <div class="carousel-item">
+      #slide-five.slide
+        p.title erb vs haml vs slim
+        #erb-vs-haml-vs-slim
+          #erb-three-way.three-way
+            p.title erb
+            p.subtitle ruby's built in template engine
+            p.subtitle
+              | uses <%...%> and <%=...%>
+            p.subtitle
+              | familiar to use (html-like syntax)
+            p.subtitle not whitespace dependent
+          #haml-three-way.three-way
+            p.title haml
+            p.subtitle provides layer of abstraction above html
+            p.subtitle clean, straightforward syntax
+            p.subtitle dry, short, understandable codes
+            p.subtitle integrates ruby code
+          #slim-three-way.three-way
+            p.title slim
+            p.subtitle faster than erb and haml, second to erubis
+            p.subtitle based on several engines like haml and jade
+            p.subtitle flexible to use
+            p.subtitle
+              | offers logic less mode (like mustache)
+            p.subtitle
+              | similar to haml, but does not require % before tag declarations
+        p.source http:/www.vemployee.com/blog/revisiting-template-engines-in-ruby-on-rails/
+    </div>
+    <div class="carousel-item">
+      #slide-six.slide
+        p.title a website ran some tests...
+        pre#comparison-code
+          code
+            span.maroon Erb render:
+            span.white 41.091 [ms] (average)
+            br
+            span.maroon Haml render:
+            span.white 43.508 [ms] (average)
+            br
+            span.maroon Slim render:
+            span.white 40.387 [ms] (average)
+            span
+              | / Fastest
+            br
+            br
+            span.maroon Erb render:
+            span.white 36.021 [ms] (median)
+            br
+            span.maroon Haml render:
+            span.white 37.316 [ms] (median)
+            br
+            span.maroon Slim render:
+            span.white 35.349 [ms] (median)
+            span
+              | / Fastest
+        p.source
+          i http:/blog.crowdint.com/2013/07/17/view-engines-performance.html
+    </div>
+    <div class="carousel-item">
+      #slide-seven.slide
+        p.title slim vs haml
+        .slim-vs-haml
+          .slim-container
+            pre.slim-vs-haml-console
+              code
+                span.maroon #hello-id.hello-class
+                br
+                span
+                  | / OR
+                br
+                span.maroon div
+                span.white
+                  | *{
+                span.violet
+                  | :id
+                span.white
+                  | =>
+                span.yellow
+                  | 'hello-id'
+                span.white
+                  | ,
+                span.violet
+                  | :class
+                span.white
+                  | =>
+                span.yellow
+                  | 'hello-class'
+                span.white
+                  | }
+                br
+                span
+                  | / OR
+                br
+                span
+                  | / YOU CAN ALSO GROUP ATTRs IN [], (), {}
+                br
+                span.maroon
+                  | div id=
+                span.yellow 'hello-id'
+                span.maroon
+                  | class=
+                span.yellow 'hello-class'
+                br
+                span
+                  | / OR
+                br
+                span.white
+                  | <
+                span.white
+                  | div
+                span.maroon
+                  | id=
+                span.yellow
+                  | 'hello-id'
+                span.maroon
+                  | class=
+                span.yellow
+                  | 'hello-class'
+                span.white
+                  | >
+                br
+                | ...
+                br
+                span.white
+                  | <
+                span.white
+                  | /div
+                span.white
+                  | >
+                br
+                span
+                  | / OR
+                br
+                br
+                span
+                  | / EXTRA: ATTRIBUTE MERGING
+                br
+                span.maroon
+                  | a class=
+                span.white
+                  | [
+                span.yellow
+                  | 'hello-class-a'
+                span.white
+                  | ,
+                span.yellow
+                  | 'hello-class-b'
+                span.white
+                  | ]
+                br
+                span.maroon
+                  | a class=
+                span.white
+                  | :hello_class_a, :hello_class_b
+
+          .haml-container
+            pre.slim-vs-haml-console
+              code
+                span.maroon #hello-id.hello-class
+    </div>
+    <div class="carousel-item">
+      #slide-eight.slide
+        p.title ...control code, output
+        p.subtitle
+          | (the same?)
+        .slim-vs-haml
+          .slim-container
+            pre.slim-vs-haml-console
+              code
+                span
+                  | / SLIM
+                br
+                span.white - variable
+                span.maroon =
+                span.violet integer
+                span.maroon if
+                span.white condition
+                br
+                br
+                span.white
+                  | = @variable
+                br
+                span.white
+                  | = puts
+                span.yellow 'string'
+
+          .haml-container
+            pre.slim-vs-haml-console
+              code
+                span
+                  | / HAML
+                br
+                span.white - variable
+                span.maroon =
+                span.violet integer
+                span.maroon if
+                span.white condition
+                br
+                br
+                span.white
+                  | = @variable
+                br
+                span.white
+                  | = puts
+                span.yellow 'string'
+    </div>
+    <div class="carousel-item">
+      #slide-eight.slide
+        p.title ...tag nesting
+        .slim-vs-haml
+          .slim-container
+            pre.slim-vs-haml-console
+              code
+                span
+                  | / SLIM
+                br
+                span.maroon
+                  | #parent-div
+                br
+                span.maroon.indent
+                  | #child-div
+                span.white content
+                br
+                br
+                span
+                  | / EXTRA: INLINE TAGS
+                br
+                span.maroon
+                  | #parent-div: #child-div
+                span.white content
+
+
+          .haml-container
+            pre.slim-vs-haml-console
+              code
+                span
+                  | / HAML
+                br
+                span.maroon
+                  | #parent-div
+                br
+                span.maroon.indent
+                  | #child-div
+                span.white content
+    </div>
+    <div class="carousel-item">
+      #slide-ten.slide
+        p.title
+          | slim's logic less (via plugin)
+        pre#logic-less-console
+          code
+            span
+              | / CONDITIONAL
+            br
+            span
+              | / if the object is not false or empty?, the content will show
+            br
+            span.white - boolean_value
+            br
+            span.maroon h1
+            span.white =
+            span.yellow 'Hello World!'
+            br
+            br
+            span
+              | / ITERATION
+            br
+            span
+              | / if the object is an array, the section will iterate
+            br
+            span.white - array
+            br
+            span.maroon tr: td
+            span.white =
+            span.yellow 'Hello World!'
+
+    </div>
+    <div class="carousel-item">
+      #slide-eleven.slide
+        p.title i think that...
+        p.subtitle
+          | from what i've read, slim is faster, and (faster is better?)
+        p.subtitle syntax-wise, there are many similarities since slim is somehow derived from haml
+        p.subtitle
+          | but, even though slim is flexible in terms of creating the tags, it's also a downside since it leads to inconsistent code (especially when working in a team)
+        p.subtitle one thing that slim has over haml is that it's not really whitespace dependent.
+    </div>
+    <div class="carousel-item">
+      #slide-twelve.slide
+        p.title conclusion?
+        p.subtitle
+          | if you prefer speed and flexibility,
+          span#conclusion-slim
+            i slim is the way to go
+        p.subtitle
+          | if you like code that is neat and DRY,
+          span#conclusion-haml
+            i use haml
+    </div>
+    <div class="carousel-item">
+      #slide-thirteen.slide
+        p.title fin
+    </div>
+  </div>
+  <a class="left carousel-control" href="#presentation-carousel" role="button" data-slide="prev">
+    <span class="icon-prev" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#presentation-carousel" role="button" data-slide="next">
+    <span class="icon-next" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>

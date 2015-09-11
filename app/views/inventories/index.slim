@@ -1,5 +1,6 @@
 #nvntory-main.row
-  .col-sm-6.col-sm-offset-3
+  / ATTRIBUTE MERGING
+  .col-sm-6*{:class => 'col-sm-offset-3'}
     .card
       .card-image nvntory
       .card-block
@@ -25,17 +26,22 @@
               :min => 0
           .row
             .col-sm-12
-              button.btn.btn-primary-outline.btn-block
+
+              / ATTRIBUTE MERGING
+              button class=['btn', 'btn-primary-outline','btn-block']
                 span.button-text ADD TO NVNTORY
+
 #nvntory-list.row
   .col-sm-6.col-sm-offset-3
     .card
       .card-block
         table#nvntory-items.table
-          thead
-            tr
-              th ID
-              th NAME
-              th CATEGORY
-              th QUANTITY
+
+          / INLINE NESTING
+          thead: tr
+            th ID
+            th NAME
+            th CATEGORY
+            th QUANTITY
+
           = render @inventories.list_by_id

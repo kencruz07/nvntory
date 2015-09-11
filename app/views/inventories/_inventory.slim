@@ -1,7 +1,7 @@
-tbody
-  tr
-    th*{:scope => inventory.id}
-      = inventory.id
-    th= inventory.name
-    th= inventory.category
-    th= inventory.quantity
+/ INLINE NESTING
+tbody: tr
+  th*{:scope => inventory.id}
+    = inventory.id
+  th= inventory.name
+  th= inventory.category
+  th= inventory.quantity

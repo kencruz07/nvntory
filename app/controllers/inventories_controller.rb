@@ -22,6 +22,9 @@ class InventoriesController < ApplicationController
     end
   end
 
+  def presentation
+  end
+
   def inventory_params
     params.require(:inventory).permit :name, :category, :quantity
   end

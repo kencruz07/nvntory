@@ -1,0 +1,197 @@
+#presentation-carousel {
+  height: 100vh;
+  width: 100vw;
+}
+
+.slide{
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 10vh;
+  padding-left: 5vw;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  .title {
+    font-size: 7rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    opacity: .5;
+    width: 50vw;
+    height: auto;
+  }
+
+  .source {
+    font-size: .8rem;
+    opacity: .5;
+  }
+}
+
+#slide-four {
+
+  #comparison {
+    height: 6vh;
+    width: 80vw;
+    display: -webkit-flex;
+    display: flex;
+
+    .comparison-item {
+      height: 100%;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 1.25rem;
+      padding-right: .5vw;
+    }
+
+    #erubis {
+      width: 56.779%;
+      background-color: #f90;
+    }
+
+    #haml {
+      width: 13.473%;
+      background-color: #339;
+    }
+
+    #slim {
+      width: 5.712%;
+      background-color: #c00;
+    }
+
+    #others {
+      width: 24.036%;
+      background-color: #999;
+    }
+  }
+}
+
+#slide-five {
+
+  .title {
+    font-size: 5rem;
+  }
+  #erb-vs-haml-vs-slim {
+    width: 80vw;
+    display: -webkit-flex;
+    display: flex;
+
+    .three-way {
+      width: 33%;
+      padding: 1vw;
+
+      .title {
+        font-size: 3rem;
+      }
+
+      .subtitle {
+        width: 100%;
+        opacity: 1;
+        font-size: 1.1rem;
+      }
+    }
+
+    #erb-three-way {
+      background-color: #f90
+    }
+
+    #haml-three-way {
+      background-color: #339
+    }
+
+    #slim-three-way {
+      background-color: #c00
+    }
+  }
+}
+
+#slide-six {
+  .title {
+    width: 80vw;
+  }
+
+  #comparison-code {
+    background-color: black;
+    width: 80vw;
+    padding: 1vw;
+
+    span {
+      margin-right: .5vw;
+    }
+  }
+}
+
+#slide-ten {
+  .title {
+    width: 80vw;
+  }
+
+  #logic-less-console {
+    width: 80vw;
+    background-color: black;
+    padding: 1vw;
+
+    span {
+      margin-right: .5vw;
+    }
+  }
+}
+
+#slide-twelve {
+  #conclusion-slim {
+    background-color: #c00;
+  }
+
+  #conclusion-haml {
+    background-color: #339;
+  }
+}
+
+.slim-vs-haml {
+  width: 80vw;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.slim-container,
+.haml-container {
+  width: 50%;
+  margin: 1vw;
+
+  .slim-vs-haml-console {
+    background-color: black;
+    width: 100%;
+    padding: 1vw;
+
+    span {
+      margin-right: .5vw;
+    }
+  }
+}
+
+.maroon {
+  color: #a30000;
+}
+
+.yellow {
+  color: #fc0
+}
+
+.white {
+  color: white;
+}
+
+.violet {
+  color: #90c;
+}
+
+.indent {
+  margin-left: 2vw;
+}
