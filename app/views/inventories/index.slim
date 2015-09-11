@@ -1,0 +1,41 @@
+#nvntory-main.row
+  .col-sm-6.col-sm-offset-3
+    .card
+      .card-image nvntory
+      .card-block
+        = form_for @inventory, :url => {:action => 'create'},
+          :html => {:multipart => true},
+          :remote => true,
+          :class => 'form-inline' do |f|
+          .row.form-group
+            .col-sm-12
+              = f.text_field :name,
+                :class => 'form-control text-center',
+                :placeholder => 'NVNTORY NAME'
+          .row.form-group
+            .col-sm-6
+              = f.select :category,
+                options_for_select([['FOOD', 'food'], ['SUPPLIES', 'supplies'], ['MISC', 'misc']]),
+                {:include_blank => 'NVNTORY TYPE'},
+                {:class => 'c-select'}
+            .col-sm-6
+              = f.number_field :quantity,
+              :class => 'form-control text-center',
+              :placeholder => 'QUANTITY',
+              :min => 0
+          .row
+            .col-sm-12
+              button.btn.btn-primary-outline.btn-block
+                span.button-text ADD TO NVNTORY
+#nvntory-list.row
+  .col-sm-6.col-sm-offset-3
+    .card
+      .card-block
+        table#nvntory-items.table
+          thead
+            tr
+              th ID
+              th NAME
+              th CATEGORY
+              th QUANTITY
+          = render @inventories.list_by_id

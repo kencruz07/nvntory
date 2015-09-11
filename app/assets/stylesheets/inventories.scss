@@ -1,21 +1,54 @@
 // Place all the styles related to the Inventories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+
+body {
+  background-color: #5d5247;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+table {
+  font-size: 0.8rem;
+
+  tbody tr th {
+    font-weight: normal;
+  }
+}
+
+.card {
+  margin: 0;
+  margin-bottom: -1px;
+}
+
+#nvntory-main {
+  margin-top: 5vw;
+  margin-bottom: 1vw;
+}
+
+#nvntory-list{
+  margin-bottom: 5vw;
+}
 
 .button-text {
   font-size: .8rem;
 }
 
 .card-image {
-  background-image: url('//wallpaperscraft.com/image/osaka_asia_street_lights_city_buildings_28514_2560x1600.jpg');
+  background-image: url('//business-forecasting.us/blog/wp-content/uploads/2013/09/inventory.jpg');
   background-size: cover;
   background-position: center;
   height: 15vw;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7rem;
+  color: white;
 }
 
 .c-select {
   width: 100%;
   text-align: center;
+  font-size: .9rem;
 }
 
 ::-webkit-input-placeholder {
